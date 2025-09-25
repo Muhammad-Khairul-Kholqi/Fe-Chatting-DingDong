@@ -8,7 +8,7 @@ export default function LeftSection() {
                 <div>
                     <h1 className="text-xl font-semibold">Selamat datang di DingDong</h1>
                     <p className="text-gray-600 text-sm mt-1 font-medium">
-                        Masuk untuk mulai percakapan asik bersama teman Anda
+                        Masuk untuk mulai percakapan bersama teman Anda
                     </p>
                 </div>
 
