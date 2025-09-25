@@ -1,36 +1,67 @@
+import Link from "next/link";
+import Input from "@/app/components/elements/input";
+
 export default function LeftSection() {
     return (
-        <div className="w-full lg:w-1/2 p-10 lg:p-8 bg-[#01020A] flex items-center justify-center order-2 lg:order-1">
-            <div>
-                <div className="text-white">
+        <div className="w-full lg:w-1/2 p-5 lg:p-8 bg-white flex items-center justify-center order-2 lg:order-1">
+            <div className="w-full max-w-[400px]">
+                <div>
                     <h1 className="text-xl font-semibold">Selamat datang di DingDong</h1>
-                    <p className="text-gray-300 text-sm mt-1">Sign in untuk mulai percakapan asik bersama teman</p>
+                    <p className="text-gray-600 text-sm mt-1 font-medium">
+                        Masuk untuk mulai percakapan asik bersama teman Anda
+                    </p>
                 </div>
 
                 <form action="" className="mt-10">
-                    <div>
-                        <label className="text-gray-400">Username<span className="text-red-400">*</span></label>
-                        <input 
-                            type="text"     
-                            className="w-full border border-gray-500 :placeholder-gray-400 rounded-md mt-2 px-3 py-2 bg-transparent text-white outline-none"
-                            placeholder="Masukkan username"
-                        />
-                    </div>
+                    <Input
+                        label="Username"
+                        placeholder="Masukkan username"
+                        required={true}
+                    />
+                    <Input
+                        label="Password"
+                        type="password"
+                        placeholder="Masukkan password"
+                        required={true}
+                    />
 
-                    <div className="mt-4">
-                        <label className="text-gray-400">Password<span className="text-red-400">*</span></label>
-                        <input
-                            type="text"
-                            className="w-full border border-gray-500 :placeholder-gray-400 rounded-md mt-2 px-3 py-2 bg-transparent text-white outline-none"
-                            placeholder="Masukkan password"
-                        />
-                    </div>
-
-                    <button className="w-full bg-[#29616D] hover:bg-[#29616D]/80 text-white font-semibold py-2 px-4 rounded-md mt-6 transition-colors cursor-pointer">
+                    <button className="w-full bg-[#29616D] hover:bg-[#29616D]/80 text-white font-semibold py-2 px-4 rounded-md mt-4 transition-colors cursor-pointer">
                         Sign In
                     </button>
+
+                    <div className="flex items-center my-6">
+                        <hr className="flex-grow border-t border-gray-300" />
+                        <span className="px-3 text-gray-500 text-sm font-medium">
+                            Atau login dengan
+                        </span>
+                        <hr className="flex-grow border-t border-gray-300" />
+                    </div>
+
+                    <button
+                        type="button"
+                        className="w-full flex items-center justify-center gap-2 border border-gray-300 rounded-md py-2 px-4 cursor-pointer text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors"
+                    >
+                        <img
+                            src="https://www.svgrepo.com/show/355037/google.svg"
+                            alt="Google"
+                            className="w-5 h-5"
+                        />
+                        Google
+                    </button>
+
+                    <div className="mt-4 text-start">
+                        <p className="text-sm text-gray-600">
+                            Belum punya akun?{" "}
+                            <Link
+                                href=""
+                                className="text-[#29616D] font-medium hover:underline"
+                            >
+                                Daftar
+                            </Link>
+                        </p>
+                    </div>
                 </form>
             </div>
         </div>
-    )
+    );
 }

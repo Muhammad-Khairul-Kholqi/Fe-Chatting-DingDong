@@ -1,5 +1,5 @@
-import RightSection from "@/app/components/sections/login/rightSection";
 import LeftSection from "@/app/components/sections/login/leftSection";
+import RightSection from "@/app/components/sections/login/rightSection";
 
 export default function LoginPage() {
   return (
